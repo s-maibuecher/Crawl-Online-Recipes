@@ -2,12 +2,18 @@
 
 import scrapy
 from selenium import webdriver
+import os
 
 
 HOMEPAGE = 'https://www.hellofresh.de'
-RECIPE_DIRECTORY = './recipes/'
+RECIPE_DIRECTORY_NAME = 'recipes'
 
 recipe_urls = []
+
+
+directory = 'cover'
+if not os.path.exists(RECIPE_DIRECTORY_NAME):
+    os.makedirs(RECIPE_DIRECTORY_NAME)
 
 class RecipeSpider(scrapy.Spider):
     name = "recipe-spider"
@@ -19,32 +25,31 @@ class RecipeSpider(scrapy.Spider):
     }
 
     def __init__(self):
-        self.driver = webdriver.Firefox()
+        #self.driver = webdriver.Firefox()
     
     def parse(self, response):
 
-        if response.meta["depth"] == 0:
+        #self.driver.get('https://www.example.org/abc')
 
-            #self.driver.get('https://www.example.org/abc')
+        image_links = response.xpath('//img/ancestor::a/@href').extract()
 
-            image_links = response.xpath('//img/ancestor::a/@href').extract()
-
-            for i in image_links:
-                if validate_recipe_URL(i):
-                    yield response.follow(i)
-
-        else:
-            print('UNTERSEITE:', response.url)
-
-            file_name = response.url.replace('?locale=de-DE', '').split('/')[-1]
-
-            with open(RECIPE_DIRECTORY + file_name +'.html', 'wb') as file:
-               file.write(response.body)
+        for i in image_links:
+            if self.validate_recipe_URL(i):
+                yield response.follow(i, callback=self.saveRecipePage)
 
 
-def validate_recipe_URL(url):
-    
-    return url.startswith('/recipes')
+    def saveRecipePage(self, response):
+        print('UNTERSEITE:', response.url)
+
+        file_name = response.url.replace('?locale=de-DE', '').split('/')[-1]
+
+        with open('./' + RECIPE_DIRECTORY_NAME + '/' + file_name +'.html', 'wb') as file:
+           file.write(response.body)
+
+
+    def validate_recipe_URL(self, url):
+        
+        return url.startswith('/recipes')
     
 
 ''' To-Do:
