@@ -1,4 +1,4 @@
-# UNDER CONSTRUCTION
+# :rocket: Build a Food Recipes Dataset :rocket:
 
 Scrapy and Selenium based Web Crawler to crawl thousands of Food Receipes for a nice DataScience Dataset.
 
@@ -11,7 +11,7 @@ Go to subdirectory ./recipes to see crawled recipes.
 * Crawl all recipes which are displayed.
 * __Problem:__ There is a 'Mehr Anzeigen' (Show more) Button after some few recipes, which have to be clicked to enrich more content to the site
 * _Solution:_ Bind in Selenium which continuous clicks this button
-	* ![Button](./docs/button.jpg)
+	![Button](./docs/button.jpg)
 
 
 ### To-Do:
