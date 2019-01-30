@@ -18,7 +18,7 @@ if not os.path.exists(RECIPE_DIRECTORY_NAME):
 class RecipeSpider(scrapy.Spider):
     name = "recipe-spider"
     allowed_domains = ["hellofresh.de"]
-    start_urls = ['https://www.hellofresh.de/recipes/gesunde-gerichte-collection']
+    start_urls = ['https://www.hellofresh.de/recipes/gesunde-gerichte-collection'] # LATER: , 'https://www.hellofresh.de/recipes/schnelle-gerichte-collection'] AND SO ON...
 
     custom_settings = {
         'DEPTH_LIMIT': 1
@@ -26,6 +26,7 @@ class RecipeSpider(scrapy.Spider):
 
     def __init__(self):
         #self.driver = webdriver.Firefox()
+        pass
     
     def parse(self, response):
 
