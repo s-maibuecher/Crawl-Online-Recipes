@@ -25,18 +25,31 @@ class RecipeSpider(scrapy.Spider):
     }
 
     def __init__(self):
-        #self.driver = webdriver.Firefox()
-        pass
+        self.driver = webdriver.Firefox()
     
     def parse(self, response):
 
-        #self.driver.get('https://www.example.org/abc')
+        self.driver.get(response.url)
+
+        for i in range(1):
+            next = self.driver.find_element_by_xpath('//button')
+            next.click()
+            #print('Button gedrückt.')
 
         image_links = response.xpath('//img/ancestor::a/@href').extract()
+        image_links_sel = self.driver.find_elements_by_xpath('//img/ancestor::a') #returns a list
 
-        for i in image_links:
-            if self.validate_recipe_URL(i):
-                yield response.follow(i, callback=self.saveRecipePage)
+        relative_links_to_urls = []
+        for l in image_links_sel:
+            
+            temp = l.get_attribute('href')
+
+            if self.validate_recipe_URL(temp):          
+                temp = temp.replace('?locale=de-DE', '').split('/')[-1]
+                relative_links_to_urls.append(temp)
+
+        for u in relative_links_to_urls:
+            yield response.follow(u, callback=self.saveRecipePage)
 
 
     def saveRecipePage(self, response):
@@ -49,8 +62,8 @@ class RecipeSpider(scrapy.Spider):
 
 
     def validate_recipe_URL(self, url):
-        
-        return url.startswith('/recipes')
+        subdomain = 'hellofresh.de/recipes/'
+        return subdomain in url
     
 
 ''' To-Do:
