@@ -3,6 +3,8 @@
 import scrapy
 from selenium import webdriver
 import os
+import time
+import selenium.common.exceptions
 
 
 HOMEPAGE = 'https://www.hellofresh.de'
@@ -11,14 +13,13 @@ RECIPE_DIRECTORY_NAME = 'recipes'
 recipe_urls = []
 
 
-directory = 'cover'
 if not os.path.exists(RECIPE_DIRECTORY_NAME):
     os.makedirs(RECIPE_DIRECTORY_NAME)
 
 class RecipeSpider(scrapy.Spider):
     name = "recipe-spider"
     allowed_domains = ["hellofresh.de"]
-    start_urls = ['https://www.hellofresh.de/recipes/gesunde-gerichte-collection'] # LATER: , 'https://www.hellofresh.de/recipes/schnelle-gerichte-collection'] AND SO ON...
+    start_urls = ['https://www.hellofresh.de/recipes/search/?order=-favorites']#, 'https://www.hellofresh.de/recipes/gesunde-gerichte-collection', 'https://www.hellofresh.de/recipes/schnelle-gerichte-collection', 'https://www.hellofresh.de/recipes/thermomix-rezepte-collection', ]
 
     custom_settings = {
         'DEPTH_LIMIT': 1
@@ -31,11 +32,59 @@ class RecipeSpider(scrapy.Spider):
 
         self.driver.get(response.url)
 
-        for i in range(1):
-            next = self.driver.find_element_by_xpath('//button')
-            next.click()
-            #print('Button gedrückt.')
+        recipe_category = response.url.split('/')[-1]
 
+        recipe_category_directory = './' + RECIPE_DIRECTORY_NAME + '/' + recipe_category
+
+        recipe_category_directory = recipe_category_directory.replace('?order=-favorites', 'favorites')
+
+        if not os.path.exists(recipe_category_directory):
+            os.makedirs(recipe_category_directory)
+
+        times_button_clicked = 0
+        times_no_button_found = 0
+        default_sleep_time = 0.1
+
+        javascript_to_execute = '''
+        var styleelement = document.createElement('style');
+        styleelement.innerHTML = '.fela-twgrf7 { display: none !important; }';
+        document.getElementsByTagName('head')[0].appendChild(styleelement);
+        '''
+
+        self.driver.execute_script(javascript_to_execute)
+
+        while True:
+            try:
+                time.sleep(default_sleep_time)
+                next = self.driver.find_element_by_xpath('//button')
+                next.click()
+                times_button_clicked += 1
+
+            except selenium.common.exceptions.ElementClickInterceptedException as e:
+                    # Remove Newsletter Modal
+                    print('Remove Newsletter Modal')
+                    modal_close_button = self.driver.find_element_by_xpath('//div[@class="dy-lb-close"]')
+                    modal_close_button.click()
+                    time.sleep(1)
+
+            except selenium.common.exceptions.NoSuchElementException as e:
+                time.sleep(5)
+                print('!'*25, 'FOUND NO BUTTON MORE')
+                times_no_button_found += 1
+                default_sleep_time *= 2
+
+                if times_no_button_found > 3:
+                    print('Found no Mehr Anzeigen button for 15 seconds. Break.')
+                    break
+
+            except Exception as e:
+                raise
+
+            finally:
+                print(f'Button was {times_button_clicked} times clicked.')
+
+
+        print('Link page seems to be loaded.')
         image_links = response.xpath('//img/ancestor::a/@href').extract()
         image_links_sel = self.driver.find_elements_by_xpath('//img/ancestor::a') #returns a list
 
@@ -48,16 +97,18 @@ class RecipeSpider(scrapy.Spider):
                 temp = temp.replace('?locale=de-DE', '').split('/')[-1]
                 relative_links_to_urls.append(temp)
 
-        for u in relative_links_to_urls:
-            yield response.follow(u, callback=self.saveRecipePage)
+        for index, u in enumerate(relative_links_to_urls):
+            time.sleep(0.2)
+            yield response.follow(u, callback=self.saveRecipePage, meta={'recipe_category_directory' : recipe_category_directory, 'index' : index})
 
+        driver.quit()
 
     def saveRecipePage(self, response):
         print('UNTERSEITE:', response.url)
 
-        file_name = response.url.replace('?locale=de-DE', '').split('/')[-1]
+        file_name = response.url.replace('?locale=de-DE', '').replace('?order=-favorites', 'favorites').split('/')[-1] + 'index' + str(response.meta['index'])
 
-        with open('./' + RECIPE_DIRECTORY_NAME + '/' + file_name +'.html', 'wb') as file:
+        with open('./' + response.meta['recipe_category_directory'] + '/' + file_name +'.html', 'wb') as file:
            file.write(response.body)
 
 
