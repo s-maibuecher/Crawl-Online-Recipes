@@ -51,7 +51,7 @@ class RecipeSpider(scrapy.Spider):
         document.getElementsByTagName('head')[0].appendChild(styleelement);
         '''
 
-        self.driver.execute_script(javascript_to_execute)
+        #self.driver.execute_script(javascript_to_execute)
 
         while True:
             try:
@@ -60,9 +60,14 @@ class RecipeSpider(scrapy.Spider):
                 next.click()
                 times_button_clicked += 1
 
+                # I have implemented a break condition here, because this algorithm is too unperformant at this specific target page because of network issues. 
+                if times_button_clicked == 50:
+                    break
+
             except selenium.common.exceptions.ElementClickInterceptedException as e:
                     # Remove Newsletter Modal
                     print('Remove Newsletter Modal')
+                    time.sleep(1)
                     modal_close_button = self.driver.find_element_by_xpath('//div[@class="dy-lb-close"]')
                     modal_close_button.click()
                     time.sleep(1)
@@ -84,6 +89,11 @@ class RecipeSpider(scrapy.Spider):
                 print(f'Button was {times_button_clicked} times clicked.')
 
 
+        ''' # To-Do: Get recipes via curl, because scrapy + selenium slows down after about 150 button clicks
+        curl "https://gw.hellofresh.com/api/recipes/search?offset=1750&limit=250&order=-date&locale=de-DE&country=de" -H "Host: gw.hellofresh.com" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0" -H "Accept: application/json, text/plain, */*" -H "Accept-Language: de,en-US;q=0.7,en;q=0.3" -H "Referer: https://www.hellofresh.de/recipes/search/?order=-date" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTE5MDY5NjgsImp0aSI6ImVhYWM2NGNiLTQ5YjAtNDI3ZC05OGViLTVkZTIyYmFmODM0NiIsImlhdCI6MTU0OTI3NzIyNSwiaXNzIjoic2VuZiJ9.j8seLD0i8CMNooXQ_vjKx98PmQ8aZyllyujve1oQGW8" -H "Origin: https://www.hellofresh.de" -H "Connection: keep-alive" --output recipe_1750-2000.json
+
+        '''
+
         print('Link page seems to be loaded.')
         image_links = response.xpath('//img/ancestor::a/@href').extract()
         image_links_sel = self.driver.find_elements_by_xpath('//img/ancestor::a') #returns a list
@@ -101,7 +111,7 @@ class RecipeSpider(scrapy.Spider):
             time.sleep(0.2)
             yield response.follow(u, callback=self.saveRecipePage, meta={'recipe_category_directory' : recipe_category_directory, 'index' : index})
 
-        driver.quit()
+        self.driver.quit()
 
     def saveRecipePage(self, response):
         print('UNTERSEITE:', response.url)
