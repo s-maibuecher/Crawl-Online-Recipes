@@ -34,7 +34,7 @@ class RecipeSpider(scrapy.Spider):
 
         recipe_category = response.url.split('/')[-1]
 
-        recipe_category_directory = './' + RECIPE_DIRECTORY_NAME + '/' + recipe_category
+        recipe_category_directory = os.path.join(RECIPE_DIRECTORY_NAME,recipe_category )
 
         recipe_category_directory = recipe_category_directory.replace('?order=-favorites', 'favorites')
 
@@ -117,7 +117,7 @@ class RecipeSpider(scrapy.Spider):
 
         file_name = response.url.replace('?locale=de-DE', '').replace('?order=-favorites', 'favorites').split('/')[-1] + 'index' + str(response.meta['index'])
 
-        with open('./' + response.meta['recipe_category_directory'] + '/' + file_name +'.html', 'wb') as file:
+        with open(os.path.join( response.meta['recipe_category_directory'] , file_name +'.html'), 'wb') as file:
            file.write(response.body)
 
 

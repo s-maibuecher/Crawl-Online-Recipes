@@ -18,7 +18,11 @@ Go to subdirectory ./recipes to see crawled recipes.
 ![Nutrition Facts](./docs/nutrition_facts.jpg)
 
 * __Problem:__ Selenium gets very slow / crashes after about 150 times of clicking the Show More button. Need a more resource-friendly way to crawl. First tried to delete items at the top of the page which were already crawled, but the React Backend resends them to the browser. Then I tried to set display:hide to these elements to fasten the page loading. But does not work, seems to be a network issue.
-	* _Solution:_ Studied HTTP traffic. Found a way to get all recipes by plain HTTP calls. See request call in sourcecode.
+	* _Solution:_ Studied HTTP traffic. Found a way to get all recipes by plain HTTP calls. See _get_recipes_via_http_calls_workaround.py_
+
+* Henceforward I use the _get_recipes_via_http_calls_workaround.py_ script to fetch all recipes. It returns XML files into the _http_requested_json_recipes_ directory
+
+`python get_recipes_via_http_calls_workaround.py`
 
 * __WORK IN PROGRESS__
 
@@ -29,7 +33,7 @@ Go to subdirectory ./recipes to see crawled recipes.
 - [x] for production: click button till all content is visible
 - [x] for production: add more subpages to crawl
 - [x] study HTTP Requests/Responses
-- [ ] send HTTP requests via python
+- [x] send HTTP requests via python
 - [ ] look for hidden data in the sourcecode, like "ratingsCount", "favoritesCount", ...
 - [ ] build SQL/Pandas Dataset
 
