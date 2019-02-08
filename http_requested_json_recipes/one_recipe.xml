@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item type="dict">
+    <country type="str">DE</country>
+    <id type="str">5c4f3ebfe3f33972c1016ff2</id>
+    <name type="str">Überbackene Hähnchenbrust Parmigiana</name>
+    <seoName type="str">Überbackene Hähnchenbrust Parmigiana</seoName>
+    <category type="null"/>
+    <slug type="str">hahnchen-parmigiana</slug>
+    <headline type="str">mit Spaghetti, Parmesan und Tomatensoße</headline>
+    <description type="str">Mahl Zeit zu glänzen! Spaghetti, Hähnchen Parmigiana – das klingt ja abenteuerlich. Hinter dieser Mischung verbirgt sich jedoch nichts anderes als ein leckeres Nudelgericht getoppt mit eine Hähnchenbrust. Paniert, angebraten und mit Tomatensoße und Käse überbacken verleiht sie dem ganzen Gericht eine würzig-aromatische Note. Welche Note genau? Eine glatte Eins natürlich! Und wofür würdet Ihr heute gerne glatte Einser verteilen? Erzählt allen beim Essen davon, ganz egal, wer oder was mit der super Note glänzen soll.</description>
+    <descriptionHTML type="str">&lt;p&gt;Mahl Zeit zu glänzen! Spaghetti, Hähnchen Parmigiana – das klingt ja abenteuerlich. Hinter dieser Mischung verbirgt sich jedoch nichts anderes als ein leckeres Nudelgericht getoppt mit eine Hähnchenbrust. Paniert, angebraten und mit Tomatensoße und Käse überbacken verleiht sie dem ganzen Gericht eine würzig-aromatische Note. Welche Note genau? Eine glatte Eins natürlich! Und wofür würdet Ihr heute gerne glatte Einser verteilen? Erzählt allen beim Essen davon, ganz egal, wer oder was mit der super Note glänzen soll.&lt;/p&gt;</descriptionHTML>
+    <descriptionMarkdown type="str">Mahl Zeit zu glänzen! Spaghetti, Hähnchen Parmigiana – das klingt ja abenteuerlich. Hinter dieser Mischung verbirgt sich jedoch nichts anderes als ein leckeres Nudelgericht getoppt mit eine Hähnchenbrust. Paniert, angebraten und mit Tomatensoße und Käse überbacken verleiht sie dem ganzen Gericht eine würzig-aromatische Note. Welche Note genau? Eine glatte Eins natürlich! Und wofür würdet Ihr heute gerne glatte Einser verteilen? Erzählt allen beim Essen davon, ganz egal, wer oder was mit der super Note glänzen soll.</descriptionMarkdown>
+    <seoDescription type="str">Iss was Du magst – mit unserem Kids Hit Rezept: Überbackene Hähnchenbrust Parmigiana. Probiere Spaghetti, Hähnchenbrust, Parmesan und Knoblauch.</seoDescription>
+    <comment type="null"/>
+    <difficulty type="int">2</difficulty>
+    <prepTime type="str">PT30M</prepTime>
+    <totalTime type="null"/>
+    <servingSize type="int">650</servingSize>
+    <createdAt type="str">2019-01-28T17:41:20+00:00</createdAt>
+    <updatedAt type="str">2019-01-29T15:01:12+00:00</updatedAt>
+    <link type="str">https://hellofresh.com/recipes/5c4f3ebfe3f33972c1016ff2</link>
+    <imageLink type="str">https://d3hvwccx09j84u.cloudfront.net/0,0/image/hahnchen-parmigiana-65c2b83d.jpg</imageLink>
+    <cardLink type="str">https://ddw4dkk7s1lkt.cloudfront.net/card/hahnchen-parmigiana-5c4f3ebfe3f33972c1016ff2-aa716cec.pdf</cardLink>
+    <videoLink type="null"/>
+    <nutrition type="list">
+        <item type="dict">
+            <type type="str">57b42a48b7e8697d4b30530d</type>
+            <name type="str">Energie (kJ)</name>
+            <amount type="int">5690</amount>
+            <unit type="str">kJ</unit>
+        </item>
+        <item type="dict">
+            <type type="str">57b42a48b7e8697d4b305304</type>
+            <name type="str">Energie (kcal)</name>
+            <amount type="int">1360</amount>
+            <unit type="str">kcal</unit>
+        </item>
+        <item type="dict">
+            <type type="str">57b42a48b7e8697d4b305307</type>
+            <name type="str">Fett</name>
+            <amount type="int">71</amount>
+            <unit type="str">g</unit>
+        </item>
+        <item type="dict">
+            <type type="str">57b42a48b7e8697d4b305308</type>
+            <name type="str">davon gesättigte Fettsäuren</name>
+            <amount type="int">10</amount>
+            <unit type="str">g</unit>
+        </item>
+        <item type="dict">
+            <type type="str">57b42a48b7e8697d4b305305</type>
+            <name type="str">Kohlenhydrate</name>
+            <amount type="int">123</amount>
+            <unit type="str">g</unit>
+        </item>
+        <item type="dict">
+            <type type="str">57b42a48b7e8697d4b305306</type>
+            <name type="str">davon Zucker</name>
+            <amount type="int">15</amount>
+            <unit type="str">g</unit>
+        </item>
+        <item type="dict">
+            <type type="str">57b42a48b7e8697d4b30530a</type>
+            <name type="str">Ballaststoffe</name>
+            <amount type="int">8</amount>
+            <unit type="str">g</unit>
+        </item>
+        <item type="dict">
+            <type type="str">57b42a48b7e8697d4b305309</type>
+            <name type="str">Eiweiß</name>
+            <amount type="int">57</amount>
+            <unit type="str">g</unit>
+        </item>
+        <item type="dict">
+            <type type="str">57b42a48b7e8697d4b30530c</type>
+            <name type="str">Cholesterol</name>
+            <amount type="int">0</amount>
+            <unit type="str">mg</unit>
+        </item>
+        <item type="dict">
+            <type type="str">57b42a48b7e8697d4b30530b</type>
+            <name type="str">Salz</name>
+            <amount type="int">2</amount>
+            <unit type="str">g</unit>
+        </item>
+    </nutrition>
+    <ingredients type="list">
+        <item type="dict">
+            <country type="str">DE</country>
+            <id type="str">56c597a2fd2cb93b428b456b</id>
+            <type type="str">hahnchenbrustfilet</type>
+            <name type="str">Hähnchenbrustfilet</name>
+            <slug type="str">hahnchenbrustfilet</slug>
+            <description type="null"/>
+            <internalName type="null"/>
+            <shipped type="bool">True</shipped>
+            <imageLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient/56c597a2fd2cb93b428b456b-f3c13014.png</imageLink>
+            <usage type="int">132</usage>
+            <hasDuplicatedName type="null"/>
+            <allergens type="list"/>
+            <family type="dict">
+                <id type="str">58877cf3ed71a76e9c03fb6b</id>
+                <type type="str">chicken</type>
+                <name type="str">Hähnchen</name>
+                <slug type="str">hahnchen</slug>
+                <description type="null"/>
+                <priority type="int">0</priority>
+                <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient-families/58877cf3ed71a76e9c03fb6b-8f15f243.png</iconLink>
+                <usageByCountry type="dict">
+                    <AT type="int">342</AT>
+                    <AU type="int">437</AU>
+                    <BE type="int">316</BE>
+                    <CA type="int">221</CA>
+                    <CH type="int">112</CH>
+                    <DE type="int">296</DE>
+                    <ER type="int">70</ER>
+                    <FR type="int">108</FR>
+                    <GB type="int">500</GB>
+                    <LU type="int">394</LU>
+                    <NL type="int">295</NL>
+                    <NZ type="int">125</NZ>
+                    <ML type="int">711</ML>
+                    <US type="int">704</US>
+                </usageByCountry>
+                <createdAt type="str">2017-01-24T16:12:35+00:00</createdAt>
+                <updatedAt type="str">2017-01-24T16:12:35+00:00</updatedAt>
+            </family>
+        </item>
+        <item type="dict">
+            <country type="str">DE</country>
+            <id type="str">554b34554dab71a6058b4576</id>
+            <type type="str">zwiebel</type>
+            <name type="str">Zwiebel</name>
+            <slug type="str">zwiebel</slug>
+            <description type="null"/>
+            <internalName type="null"/>
+            <shipped type="bool">True</shipped>
+            <imageLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/image/554b34554dab71a6058b4576.png</imageLink>
+            <usage type="int">817</usage>
+            <hasDuplicatedName type="null"/>
+            <allergens type="list"/>
+            <family type="dict">
+                <id type="str">58877cf3ed71a76e9c03fbee</id>
+                <type type="str">onion</type>
+                <name type="str">Zwiebel</name>
+                <slug type="str">zwiebel</slug>
+                <description type="null"/>
+                <priority type="int">0</priority>
+                <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient-families/58877cf3ed71a76e9c03fbee-34de32d5.png</iconLink>
+                <usageByCountry type="dict">
+                    <AT type="int">1809</AT>
+                    <AU type="int">1194</AU>
+                    <BE type="int">1262</BE>
+                    <CA type="int">691</CA>
+                    <CH type="int">368</CH>
+                    <DE type="int">1657</DE>
+                    <ER type="int">179</ER>
+                    <FR type="int">433</FR>
+                    <GB type="int">1548</GB>
+                    <LU type="int">1696</LU>
+                    <NL type="int">1558</NL>
+                    <NZ type="int">288</NZ>
+                    <ML type="int">261</ML>
+                    <US type="int">2458</US>
+                </usageByCountry>
+                <createdAt type="str">2017-01-24T16:12:35+00:00</createdAt>
+                <updatedAt type="str">2017-01-24T16:12:35+00:00</updatedAt>
+            </family>
+        </item>
+        <item type="dict">
+            <country type="str">DE</country>
+            <id type="str">567270cdf8b25e663f8b4567</id>
+            <type type="str">knoblauchzehe</type>
+            <name type="str">Knoblauchzehe</name>
+            <slug type="str">knoblauchzehe</slug>
+            <description type="null"/>
+            <internalName type="null"/>
+            <shipped type="bool">True</shipped>
+            <imageLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/image/567270cdf8b25e663f8b4567.png</imageLink>
+            <usage type="int">1298</usage>
+            <hasDuplicatedName type="null"/>
+            <allergens type="list"/>
+            <family type="dict">
+                <id type="str">58877cf3ed71a76e9c03fba4</id>
+                <type type="str">garlic</type>
+                <name type="str">Knoblauch</name>
+                <slug type="str">knoblauch</slug>
+                <description type="null"/>
+                <priority type="int">0</priority>
+                <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient-families/58877cf3ed71a76e9c03fba4-20b617ed.png</iconLink>
+                <usageByCountry type="dict">
+                    <AT type="int">1962</AT>
+                    <AU type="int">1156</AU>
+                    <BE type="int">1040</BE>
+                    <CA type="int">581</CA>
+                    <CH type="int">416</CH>
+                    <DE type="int">1792</DE>
+                    <ER type="int">173</ER>
+                    <FR type="int">393</FR>
+                    <GB type="int">1286</GB>
+                    <LU type="int">1403</LU>
+                    <NL type="int">1297</NL>
+                    <NZ type="int">337</NZ>
+                    <ML type="int">349</ML>
+                    <US type="int">1476</US>
+                </usageByCountry>
+                <createdAt type="str">2017-01-24T16:12:35+00:00</createdAt>
+                <updatedAt type="str">2017-01-24T16:12:35+00:00</updatedAt>
+            </family>
+        </item>
+        <item type="dict">
+            <country type="str">DE</country>
+            <id type="str">56cf035ff8b25e722b8b4567</id>
+            <type type="str">italienischer-hartkase</type>
+            <name type="str">Hartkäse ital. Art</name>
+            <slug type="str">italienischer-hartkase</slug>
+            <description type="null"/>
+            <internalName type="null"/>
+            <shipped type="bool">True</shipped>
+            <imageLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/image/56cf035ff8b25e722b8b4567.png</imageLink>
+            <usage type="int">389</usage>
+            <hasDuplicatedName type="null"/>
+            <allergens type="list">
+                <item type="str">57962a07b7e8697d4b3052fa</item>
+                <item type="str">57962a07b7e8697d4b3052f6</item>
+            </allergens>
+            <family type="dict">
+                <id type="str">58877cf3ed71a76e9c03fb68</id>
+                <type type="str">cheese</type>
+                <name type="str">Greyerzer</name>
+                <slug type="str">greyerzer</slug>
+                <description type="null"/>
+                <priority type="int">0</priority>
+                <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient-families/58877cf3ed71a76e9c03fb68-b56fbaaf.png</iconLink>
+                <usageByCountry type="dict">
+                    <AT type="int">2034</AT>
+                    <AU type="int">718</AU>
+                    <BE type="int">996</BE>
+                    <CA type="int">380</CA>
+                    <CH type="int">395</CH>
+                    <DE type="int">1887</DE>
+                    <ER type="int">101</ER>
+                    <FR type="int">332</FR>
+                    <GB type="int">907</GB>
+                    <LU type="int">1400</LU>
+                    <NL type="int">1244</NL>
+                    <NZ type="int">179</NZ>
+                    <ML type="int">753</ML>
+                    <US type="int">1758</US>
+                </usageByCountry>
+                <createdAt type="str">2017-01-24T16:12:35+00:00</createdAt>
+                <updatedAt type="str">2017-01-24T16:12:35+00:00</updatedAt>
+            </family>
+        </item>
+        <item type="dict">
+            <country type="str">DE</country>
+            <id type="str">554b6c03fd2cb9d0608b456d</id>
+            <type type="str">semmelbrösel</type>
+            <name type="str">Semmelbrösel</name>
+            <slug type="str">semmelbrosel</slug>
+            <description type="null"/>
+            <internalName type="null"/>
+            <shipped type="bool">True</shipped>
+            <imageLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/image/554b6c03fd2cb9d0608b456d.png</imageLink>
+            <usage type="int">156</usage>
+            <hasDuplicatedName type="null"/>
+            <allergens type="list">
+                <item type="str">57962a07b7e8697d4b3052f5</item>
+                <item type="str">57962a07b7e8697d4b3052f3</item>
+            </allergens>
+            <family type="dict">
+                <id type="str">58877cf3ed71a76e9c03fb55</id>
+                <type type="str">breadcrumbs</type>
+                <name type="str">Semmelbrösel</name>
+                <slug type="str">semmelbrosel</slug>
+                <description type="null"/>
+                <priority type="int">0</priority>
+                <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient-families/58877cf3ed71a76e9c03fb55-7b32397f.png</iconLink>
+                <usageByCountry type="dict">
+                    <AT type="int">189</AT>
+                    <AU type="int">89</AU>
+                    <BE type="int">1</BE>
+                    <CA type="int">15</CA>
+                    <CH type="int">20</CH>
+                    <DE type="int">156</DE>
+                    <ER type="int">0</ER>
+                    <FR type="int">0</FR>
+                    <GB type="int">1</GB>
+                    <LU type="int">1</LU>
+                    <NL type="int">1</NL>
+                    <NZ type="int">46</NZ>
+                    <ML type="int">5</ML>
+                    <US type="int">0</US>
+                </usageByCountry>
+                <createdAt type="str">2017-01-24T16:12:35+00:00</createdAt>
+                <updatedAt type="str">2017-01-24T16:12:35+00:00</updatedAt>
+            </family>
+        </item>
+        <item type="dict">
+            <country type="str">DE</country>
+            <id type="str">5a86a7bf30006c052373c3a2</id>
+            <type type="str">ei-shipped</type>
+            <name type="str">Ei</name>
+            <slug type="str">ei-shipped</slug>
+            <description type="null"/>
+            <internalName type="str">Ei [shipped]</internalName>
+            <shipped type="bool">True</shipped>
+            <imageLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient/5a86a7bf30006c052373c3a2-a6b6f336.png</imageLink>
+            <usage type="int">75</usage>
+            <hasDuplicatedName type="null"/>
+            <allergens type="list">
+                <item type="str">57962a07b7e8697d4b3052f6</item>
+            </allergens>
+            <family type="dict">
+                <id type="str">58877cf3ed71a76e9c03fb94</id>
+                <type type="str">eggs</type>
+                <name type="str">Eier</name>
+                <slug type="str">eier</slug>
+                <description type="null"/>
+                <priority type="int">0</priority>
+                <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient-families/58877cf3ed71a76e9c03fb94-b612d37c.png</iconLink>
+                <usageByCountry type="dict">
+                    <AT type="int">152</AT>
+                    <AU type="int">240</AU>
+                    <BE type="int">359</BE>
+                    <CA type="int">0</CA>
+                    <CH type="int">37</CH>
+                    <DE type="int">136</DE>
+                    <ER type="int">0</ER>
+                    <FR type="int">77</FR>
+                    <GB type="int">0</GB>
+                    <LU type="int">407</LU>
+                    <NL type="int">437</NL>
+                    <NZ type="int">120</NZ>
+                    <ML type="int">60</ML>
+                    <US type="int">62</US>
+                </usageByCountry>
+                <createdAt type="str">2017-01-24T16:12:35+00:00</createdAt>
+                <updatedAt type="str">2017-01-24T16:12:35+00:00</updatedAt>
+            </family>
+        </item>
+        <item type="dict">
+            <country type="str">DE</country>
+            <id type="str">58f719813131006bca49b6a2</id>
+            <type type="str">mehl</type>
+            <name type="str">Weizenmehl</name>
+            <slug type="str">mehl</slug>
+            <description type="null"/>
+            <internalName type="str">Mehl shipped</internalName>
+            <shipped type="bool">True</shipped>
+            <imageLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredients/58f719813131006bca49b6a2-aab15b2d.png</imageLink>
+            <usage type="int">60</usage>
+            <hasDuplicatedName type="null"/>
+            <allergens type="list">
+                <item type="str">57962a07b7e8697d4b3052f5</item>
+            </allergens>
+            <family type="dict">
+                <id type="str">58877cf3ed71a76e9c03fba0</id>
+                <type type="str">flour</type>
+                <name type="str">Mehl</name>
+                <slug type="str">mehl</slug>
+                <description type="null"/>
+                <priority type="int">0</priority>
+                <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient-families/58877cf3ed71a76e9c03fba0-03891dce.png</iconLink>
+                <usageByCountry type="dict">
+                    <AT type="int">405</AT>
+                    <AU type="int">209</AU>
+                    <BE type="int">10</BE>
+                    <CA type="int">111</CA>
+                    <CH type="int">85</CH>
+                    <DE type="int">408</DE>
+                    <ER type="int">25</ER>
+                    <FR type="int">0</FR>
+                    <GB type="int">142</GB>
+                    <LU type="int">5</LU>
+                    <NL type="int">14</NL>
+                    <NZ type="int">77</NZ>
+                    <ML type="int">15</ML>
+                    <US type="int">211</US>
+                </usageByCountry>
+                <createdAt type="str">2017-01-24T16:12:35+00:00</createdAt>
+                <updatedAt type="str">2017-01-24T16:12:35+00:00</updatedAt>
+            </family>
+        </item>
+        <item type="dict">
+            <country type="str">DE</country>
+            <id type="str">5af9559130006c53021861f2</id>
+            <type type="str">basilikumpaste</type>
+            <name type="str">Basilikumpaste</name>
+            <slug type="str">basilikumpaste</slug>
+            <description type="null"/>
+            <internalName type="str">Basilikumpaste</internalName>
+            <shipped type="bool">True</shipped>
+            <imageLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient/5af9559130006c53021861f2-820ddb98.png</imageLink>
+            <usage type="int">51</usage>
+            <hasDuplicatedName type="null"/>
+            <allergens type="list"/>
+            <family type="dict">
+                <id type="str">58877cf3ed71a76e9c03fb91</id>
+                <type type="str">dried-herbs</type>
+                <name type="str">Getrocknete Kräuter</name>
+                <slug type="str">getrocknete-krauter</slug>
+                <description type="null"/>
+                <priority type="int">0</priority>
+                <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient-families/58877cf3ed71a76e9c03fb91-bbf9b1a5.png</iconLink>
+                <usageByCountry type="dict">
+                    <AT type="int">89</AT>
+                    <AU type="int">6</AU>
+                    <BE type="int">52</BE>
+                    <CA type="int">11</CA>
+                    <CH type="int">16</CH>
+                    <DE type="int">87</DE>
+                    <ER type="int">0</ER>
+                    <FR type="int">0</FR>
+                    <GB type="int">37</GB>
+                    <LU type="int">4</LU>
+                    <NL type="int">56</NL>
+                    <NZ type="int">0</NZ>
+                    <ML type="int">0</ML>
+                    <US type="int">46</US>
+                </usageByCountry>
+                <createdAt type="str">2017-01-24T16:12:35+00:00</createdAt>
+                <updatedAt type="str">2017-01-24T16:12:35+00:00</updatedAt>
+            </family>
+        </item>
+        <item type="dict">
+            <country type="str">DE</country>
+            <id type="str">556856364dab713e1d8b4568</id>
+            <type type="str">spaghetti</type>
+            <name type="str">Spaghetti</name>
+            <slug type="str">spaghetti</slug>
+            <description type="null"/>
+            <internalName type="null"/>
+            <shipped type="bool">True</shipped>
+            <imageLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/image/556856364dab713e1d8b4568.png</imageLink>
+            <usage type="int">44</usage>
+            <hasDuplicatedName type="null"/>
+            <allergens type="list">
+                <item type="str">57962a07b7e8697d4b3052f5</item>
+            </allergens>
+            <family type="dict">
+                <id type="str">58877cf3ed71a76e9c03fbfd</id>
+                <type type="str">pasta</type>
+                <name type="str">Pasta</name>
+                <slug type="str">pasta</slug>
+                <description type="null"/>
+                <priority type="int">0</priority>
+                <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient-families/58877cf3ed71a76e9c03fbfd-6aeaecc6.png</iconLink>
+                <usageByCountry type="dict">
+                    <AT type="int">477</AT>
+                    <AU type="int">196</AU>
+                    <BE type="int">409</BE>
+                    <CA type="int">106</CA>
+                    <CH type="int">105</CH>
+                    <DE type="int">449</DE>
+                    <ER type="int">35</ER>
+                    <FR type="int">141</FR>
+                    <GB type="int">290</GB>
+                    <LU type="int">515</LU>
+                    <NL type="int">477</NL>
+                    <NZ type="int">51</NZ>
+                    <ML type="int">475</ML>
+                    <US type="int">536</US>
+                </usageByCountry>
+                <createdAt type="str">2017-01-24T16:12:35+00:00</createdAt>
+                <updatedAt type="str">2017-01-24T16:12:35+00:00</updatedAt>
+            </family>
+        </item>
+        <item type="dict">
+            <country type="str">DE</country>
+            <id type="str">5568324ffd2cb9d8268b456a</id>
+            <type type="str">tomatenstücke</type>
+            <name type="str">stückige Tomaten</name>
+            <slug type="str">tomatenstucke</slug>
+            <description type="null"/>
+            <internalName type="str">Tomatenstücke</internalName>
+            <shipped type="bool">True</shipped>
+            <imageLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/image/5568324ffd2cb9d8268b456a.png</imageLink>
+            <usage type="int">232</usage>
+            <hasDuplicatedName type="null"/>
+            <allergens type="list"/>
+            <family type="dict">
+                <id type="str">58877cf3ed71a76e9c03fc46</id>
+                <type type="str">tomatoes</type>
+                <name type="str">Tomaten</name>
+                <slug type="str">tomaten</slug>
+                <description type="null"/>
+                <priority type="int">0</priority>
+                <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient-families/58877cf3ed71a76e9c03fc46-7984cb37.png</iconLink>
+                <usageByCountry type="dict">
+                    <AT type="int">1612</AT>
+                    <AU type="int">672</AU>
+                    <BE type="int">894</BE>
+                    <CA type="int">288</CA>
+                    <CH type="int">325</CH>
+                    <DE type="int">1534</DE>
+                    <ER type="int">62</ER>
+                    <FR type="int">299</FR>
+                    <GB type="int">819</GB>
+                    <LU type="int">1161</LU>
+                    <NL type="int">1070</NL>
+                    <NZ type="int">179</NZ>
+                    <ML type="int">455</ML>
+                    <US type="int">1281</US>
+                </usageByCountry>
+                <createdAt type="str">2017-01-24T16:12:35+00:00</createdAt>
+                <updatedAt type="str">2017-01-24T16:12:35+00:00</updatedAt>
+            </family>
+        </item>
+        <item type="dict">
+            <country type="str">DE</country>
+            <id type="str">554b1bf6f8b25eef3e8b4570</id>
+            <type type="str">ol</type>
+            <name type="str">Öl*</name>
+            <slug type="str">ol</slug>
+            <description type="null"/>
+            <internalName type="null"/>
+            <shipped type="bool">False</shipped>
+            <imageLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/image/554b1bf6f8b25eef3e8b4570.png</imageLink>
+            <usage type="int">1609</usage>
+            <hasDuplicatedName type="null"/>
+            <allergens type="list"/>
+            <family type="dict">
+                <id type="str">58877cf3ed71a76e9c03fbe8</id>
+                <type type="str">oil</type>
+                <name type="str">Öl</name>
+                <slug type="str">ol</slug>
+                <description type="null"/>
+                <priority type="int">0</priority>
+                <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient-families/58877cf3ed71a76e9c03fbe8-34c502d3.png</iconLink>
+                <usageByCountry type="dict">
+                    <AT type="int">3243</AT>
+                    <AU type="int">136</AU>
+                    <BE type="int">449</BE>
+                    <CA type="int">969</CA>
+                    <CH type="int">713</CH>
+                    <DE type="int">2922</DE>
+                    <ER type="int">195</ER>
+                    <FR type="int">133</FR>
+                    <GB type="int">12</GB>
+                    <LU type="int">580</LU>
+                    <NL type="int">553</NL>
+                    <NZ type="int">0</NZ>
+                    <ML type="int">57</ML>
+                    <US type="int">1048</US>
+                </usageByCountry>
+                <createdAt type="str">2017-01-24T16:12:35+00:00</createdAt>
+                <updatedAt type="str">2017-01-24T16:12:35+00:00</updatedAt>
+            </family>
+        </item>
+        <item type="dict">
+            <country type="str">DE</country>
+            <id type="str">554b1c284dab71a9058b456b</id>
+            <type type="str">salz</type>
+            <name type="str">Salz*</name>
+            <slug type="str">salz</slug>
+            <description type="null"/>
+            <internalName type="null"/>
+            <shipped type="bool">False</shipped>
+            <imageLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/image/554b1c284dab71a9058b456b.png</imageLink>
+            <usage type="int">3176</usage>
+            <hasDuplicatedName type="null"/>
+            <allergens type="list"/>
+            <family type="dict">
+                <id type="str">58877cf3ed71a76e9c03fc25</id>
+                <type type="str">salt</type>
+                <name type="str">Salz</name>
+                <slug type="str">salz</slug>
+                <description type="null"/>
+                <priority type="int">0</priority>
+                <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient-families/58877cf3ed71a76e9c03fc25-abd39ad0.png</iconLink>
+                <usageByCountry type="dict">
+                    <AT type="int">3497</AT>
+                    <AU type="int">495</AU>
+                    <BE type="int">52</BE>
+                    <CA type="int">254</CA>
+                    <CH type="int">736</CH>
+                    <DE type="int">3181</DE>
+                    <ER type="int">208</ER>
+                    <FR type="int">2</FR>
+                    <GB type="int">136</GB>
+                    <LU type="int">33</LU>
+                    <NL type="int">68</NL>
+                    <NZ type="int">255</NZ>
+                    <ML type="int">74</ML>
+                    <US type="int">2769</US>
+                </usageByCountry>
+                <createdAt type="str">2017-01-24T16:12:35+00:00</createdAt>
+                <updatedAt type="str">2017-01-24T16:12:35+00:00</updatedAt>
+            </family>
+        </item>
+        <item type="dict">
+            <country type="str">DE</country>
+            <id type="str">55b0a135fd2cb9121e8b4567</id>
+            <type type="str">pfeffer</type>
+            <name type="str">Pfeffer*</name>
+            <slug type="str">pfeffer</slug>
+            <description type="null"/>
+            <internalName type="str">Pfeffer [home]</internalName>
+            <shipped type="bool">False</shipped>
+            <imageLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/image/55b0a135fd2cb9121e8b4567.png</imageLink>
+            <usage type="int">2927</usage>
+            <hasDuplicatedName type="null"/>
+            <allergens type="list"/>
+            <family type="dict">
+                <id type="str">58877cf3ed71a76e9c03fc05</id>
+                <type type="str">pepper-spice</type>
+                <name type="str">Pfeffer (Gewürz)</name>
+                <slug type="str">pfeffer-gewurz</slug>
+                <description type="null"/>
+                <priority type="int">0</priority>
+                <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient-families/58877cf3ed71a76e9c03fc05-00a37cd9.png</iconLink>
+                <usageByCountry type="dict">
+                    <AT type="int">3474</AT>
+                    <AU type="int">123</AU>
+                    <BE type="int">13</BE>
+                    <CA type="int">141</CA>
+                    <CH type="int">721</CH>
+                    <DE type="int">3163</DE>
+                    <ER type="int">211</ER>
+                    <FR type="int">5</FR>
+                    <GB type="int">174</GB>
+                    <LU type="int">19</LU>
+                    <NL type="int">20</NL>
+                    <NZ type="int">8</NZ>
+                    <ML type="int">100</ML>
+                    <US type="int">2808</US>
+                </usageByCountry>
+                <createdAt type="str">2017-01-24T16:12:35+00:00</createdAt>
+                <updatedAt type="str">2017-01-24T16:12:35+00:00</updatedAt>
+            </family>
+        </item>
+    </ingredients>
+    <allergens type="list">
+        <item type="dict">
+            <id type="str">57962a07b7e8697d4b3052fa</id>
+            <type type="str">milk</type>
+            <name type="str">Milch</name>
+            <slug type="str">laktose</slug>
+            <description type="null"/>
+            <tracesOf type="bool">False</tracesOf>
+            <triggersTracesOf type="bool">False</triggersTracesOf>
+            <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/0,0/allergens/57962a07b7e8697d4b3052fa-be127d3f.png</iconLink>
+            <usage type="int">1018</usage>
+        </item>
+        <item type="dict">
+            <id type="str">57962a07b7e8697d4b3052f6</id>
+            <type type="str">egg</type>
+            <name type="str">Ei</name>
+            <slug type="str">ei</slug>
+            <description type="null"/>
+            <tracesOf type="bool">False</tracesOf>
+            <triggersTracesOf type="bool">False</triggersTracesOf>
+            <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/0,0/allergens/57962a07b7e8697d4b3052f6-63afd198.png</iconLink>
+            <usage type="int">365</usage>
+        </item>
+        <item type="dict">
+            <id type="str">57962a07b7e8697d4b3052f5</id>
+            <type type="str">gluten</type>
+            <name type="str">Weizen</name>
+            <slug type="str">weizen</slug>
+            <description type="null"/>
+            <tracesOf type="bool">False</tracesOf>
+            <triggersTracesOf type="bool">False</triggersTracesOf>
+            <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/0,0/allergens/57962a07b7e8697d4b3052f5-e20d9ca4.png</iconLink>
+            <usage type="int">1406</usage>
+        </item>
+        <item type="dict">
+            <id type="str">57962a07b7e8697d4b3052f3</id>
+            <type type="str">maycontaintracesofallergens</type>
+            <name type="str">kann Spuren von Allergenen enthalten</name>
+            <slug type="str">kann-spuren-von-allergenen-enthalten</slug>
+            <description type="null"/>
+            <tracesOf type="bool">False</tracesOf>
+            <triggersTracesOf type="bool">True</triggersTracesOf>
+            <iconLink type="null"/>
+            <usage type="int">1649</usage>
+        </item>
+    </allergens>
+    <utensils type="list"/>
+    <tags type="list"/>
+    <cuisines type="list">
+        <item type="dict">
+            <id type="str">57ebbc17b7e8697d4b3053ac</id>
+            <type type="str">italian</type>
+            <name type="str">Italienisch</name>
+            <slug type="str">italienisch</slug>
+            <iconLink type="str">https://d3hvwccx09j84u.cloudfront.net/0,0/cuisines/57ebbc17b7e8697d4b3053ac-ed3b5276.jpg</iconLink>
+            <usage type="int">4489</usage>
+        </item>
+    </cuisines>
+    <wines type="list"/>
+    <marketplaceItems type="list"/>
+    <author type="str">kids-hit</author>
+    <label type="dict">
+        <text type="str">KIDS HIT</text>
+        <handle type="str">kids-hit</handle>
+        <backgroundColor type="str">#efb753</backgroundColor>
+        <foregroundColor type="str">#FFFFFF</foregroundColor>
+    </label>
+    <yieldType type="str">servings</yieldType>
+    <yields type="list">
+        <item type="dict">
+            <yields type="int">2</yields>
+            <ingredients type="list">
+                <item type="dict">
+                    <id type="str">56c597a2fd2cb93b428b456b</id>
+                    <amount type="int">280</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">554b34554dab71a6058b4576</id>
+                    <amount type="int">1</amount>
+                    <unit type="str">Stück</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">567270cdf8b25e663f8b4567</id>
+                    <amount type="int">1</amount>
+                    <unit type="str">Stück</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">56cf035ff8b25e722b8b4567</id>
+                    <amount type="int">20</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">554b6c03fd2cb9d0608b456d</id>
+                    <amount type="int">25</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">5a86a7bf30006c052373c3a2</id>
+                    <amount type="int">1</amount>
+                    <unit type="str">Stück</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">58f719813131006bca49b6a2</id>
+                    <amount type="int">25</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">5af9559130006c53021861f2</id>
+                    <amount type="int">15</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">556856364dab713e1d8b4568</id>
+                    <amount type="int">250</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">5568324ffd2cb9d8268b456a</id>
+                    <amount type="int">1</amount>
+                    <unit type="str">Dose</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">554b1bf6f8b25eef3e8b4570</id>
+                    <amount type="null"/>
+                    <unit type="str">ml</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">554b1c284dab71a9058b456b</id>
+                    <amount type="null"/>
+                    <unit type="str">nach Geschmack</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">55b0a135fd2cb9121e8b4567</id>
+                    <amount type="null"/>
+                    <unit type="str">nach Geschmack</unit>
+                </item>
+            </ingredients>
+        </item>
+        <item type="dict">
+            <yields type="int">3</yields>
+            <ingredients type="list">
+                <item type="dict">
+                    <id type="str">56c597a2fd2cb93b428b456b</id>
+                    <amount type="int">420</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">554b34554dab71a6058b4576</id>
+                    <amount type="int">1</amount>
+                    <unit type="str">Stück</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">567270cdf8b25e663f8b4567</id>
+                    <amount type="int">1</amount>
+                    <unit type="str">Stück</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">56cf035ff8b25e722b8b4567</id>
+                    <amount type="int">20</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">554b6c03fd2cb9d0608b456d</id>
+                    <amount type="int">38</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">5a86a7bf30006c052373c3a2</id>
+                    <amount type="int">2</amount>
+                    <unit type="str">Stück</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">58f719813131006bca49b6a2</id>
+                    <amount type="int">50</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">5af9559130006c53021861f2</id>
+                    <amount type="int">24</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">556856364dab713e1d8b4568</id>
+                    <amount type="int">375</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">5568324ffd2cb9d8268b456a</id>
+                    <amount type="int">2</amount>
+                    <unit type="str">Dose</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">554b1bf6f8b25eef3e8b4570</id>
+                    <amount type="null"/>
+                    <unit type="str">ml</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">554b1c284dab71a9058b456b</id>
+                    <amount type="null"/>
+                    <unit type="str">nach Geschmack</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">55b0a135fd2cb9121e8b4567</id>
+                    <amount type="null"/>
+                    <unit type="str">nach Geschmack</unit>
+                </item>
+            </ingredients>
+        </item>
+        <item type="dict">
+            <yields type="int">4</yields>
+            <ingredients type="list">
+                <item type="dict">
+                    <id type="str">56c597a2fd2cb93b428b456b</id>
+                    <amount type="int">560</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">554b34554dab71a6058b4576</id>
+                    <amount type="int">2</amount>
+                    <unit type="str">Stück</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">567270cdf8b25e663f8b4567</id>
+                    <amount type="int">2</amount>
+                    <unit type="str">Stück</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">56cf035ff8b25e722b8b4567</id>
+                    <amount type="int">40</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">554b6c03fd2cb9d0608b456d</id>
+                    <amount type="int">50</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">5a86a7bf30006c052373c3a2</id>
+                    <amount type="int">2</amount>
+                    <unit type="str">Stück</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">58f719813131006bca49b6a2</id>
+                    <amount type="int">50</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">5af9559130006c53021861f2</id>
+                    <amount type="int">30</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">556856364dab713e1d8b4568</id>
+                    <amount type="int">500</amount>
+                    <unit type="str">g</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">5568324ffd2cb9d8268b456a</id>
+                    <amount type="int">2</amount>
+                    <unit type="str">Dose</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">554b1bf6f8b25eef3e8b4570</id>
+                    <amount type="null"/>
+                    <unit type="str">ml</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">554b1c284dab71a9058b456b</id>
+                    <amount type="null"/>
+                    <unit type="str">nach Geschmack</unit>
+                </item>
+                <item type="dict">
+                    <id type="str">55b0a135fd2cb9121e8b4567</id>
+                    <amount type="null"/>
+                    <unit type="str">nach Geschmack</unit>
+                </item>
+            </ingredients>
+        </item>
+    </yields>
+    <steps type="list">
+        <item type="dict">
+            <index type="int">1</index>
+            <instructionsMarkdown type="str">Demnächst findest Du hier unsere Schritt-für-Schritt-Anleitungen mit denen Du unsere köstlichen Rezepte nachkochen kannst.</instructionsMarkdown>
+            <instructionsHTML type="str">&lt;p&gt;Demnächst findest Du hier unsere Schritt-für-Schritt-Anleitungen mit denen Du unsere köstlichen Rezepte nachkochen kannst.&lt;/p&gt;</instructionsHTML>
+            <instructions type="str">Demnächst findest Du hier unsere Schritt-für-Schritt-Anleitungen mit denen Du unsere köstlichen Rezepte nachkochen kannst.</instructions>
+            <timers type="list"/>
+            <images type="list"/>
+            <videos type="list"/>
+            <ingredients type="list"/>
+            <utensils type="list"/>
+        </item>
+    </steps>
+    <averageRating type="null"/>
+    <ratingsCount type="null"/>
+    <favoritesCount type="null"/>
+    <active type="bool">True</active>
+    <highlighted type="bool">False</highlighted>
+    <isDinnerToLunch type="bool">False</isDinnerToLunch>
+    <isExcludedFromIndex type="bool">False</isExcludedFromIndex>
+    <isPremium type="bool">False</isPremium>
+    <websiteUrl type="str">https://www.hellofresh.de/recipes/hahnchen-parmigiana-5c4f3ebfe3f33972c1016ff2</websiteUrl>
+    <clonedFrom type="null"/>
+    <canonical type="null"/>
+    <canonicalLink type="null"/>
+</item>
