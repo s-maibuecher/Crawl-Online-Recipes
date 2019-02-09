@@ -1,6 +1,7 @@
 *.html
 *.json
 *.xml
+*.csv
 !http_requested_json_recipes/one_recipe.xml
 .project
 geckodriver.log

@@ -108,11 +108,11 @@ class RecipeSpider(scrapy.Spider):
 
         for index, u in enumerate(relative_links_to_urls):
             time.sleep(0.2)
-            yield response.follow(u, callback=self.saveRecipePage, meta={'recipe_category_directory' : recipe_category_directory, 'index' : index})
+            yield response.follow(u, callback=self.save_recipe_page, meta={'recipe_category_directory' : recipe_category_directory, 'index' : index})
 
         self.driver.quit()
 
-    def saveRecipePage(self, response):
+    def save_recipe_page(self, response):
         print('UNTERSEITE:', response.url)
 
         file_name = response.url.replace('?locale=de-DE', '').replace('?order=-favorites', 'favorites').split('/')[-1] + 'index' + str(response.meta['index'])

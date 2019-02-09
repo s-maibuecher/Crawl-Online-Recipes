@@ -24,6 +24,10 @@ Go to subdirectory ./recipes to see crawled recipes.
 
 `python get_recipes_via_http_calls_workaround.py`
 
+* __Problem:__ Sadly there were some encoding problems within the recipe data. See screenshot.
+![Encoding Problems](encoding-problems.jpg)
+* _Solution:_ I had to use a mass search and replace tool to replace these characters. About 5min work.
+
 * __WORK IN PROGRESS__
 
 ### To-Do:
