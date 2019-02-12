@@ -13,18 +13,21 @@ if not os.path.exists('CSV'):
 # IMPORTANT: the XPath should be relative to the item (=recipe) element 
 data_dict = {
 	'name' : '/name/text()',
-	'url' : '/link/text()'
+	'url' : '/link/text()',
+	'subtitle' : '/headline/text()',
+	'nutritionnames2compare' : '/nutrition/item/name/text()'
 	# ...
 }
 	
 data_column_list = []
-temp_dict = {}
+
 
 def init_dataframe():
 	'''
 	init and returns the dataframe with the keys from the data_dict as columns values
 	'''
-	recipe_dataframe = pd.DataFrame(temp_dict)
+	
+	recipe_dataframe = pd.DataFrame(data_column_list)
 	print(recipe_dataframe.head())
 
 	return recipe_dataframe
@@ -33,15 +36,29 @@ def write_data_to_list(filepath):
 	'''
 	fetch the XPaths expressions from the data_dict and write the data to the data_column_list
 	'''
+	
 	try:
 		print(filepath)
 		root = etree.parse(filepath)
-		XPATH_PREFIX = '/root/items/item'
 
-		for dict_row in data_dict.keys():
-			t = root.xpath(XPATH_PREFIX + data_dict[dict_row])
-			temp_dict[dict_row] = t
+		nr_of_items = len(root.xpath('/root/items/item'))
 
+		for i in range(1, nr_of_items+1):
+			
+			XPATH_PREFIX = f'/root/items/item[{i}]'
+
+			temp_dict = {}
+
+			for dict_row in data_dict.keys():
+				
+				t = root.xpath(XPATH_PREFIX + data_dict[dict_row])
+
+				if len(t) == 1:
+					temp_dict[dict_row] = t[0]
+				else:
+					temp_dict[dict_row] = [t]
+				
+			data_column_list.append(temp_dict)
 
 	except etree.XMLSyntaxError as e:
 		print('Fehler: lxml.etree.XMLSyntaxError!!')
@@ -72,3 +89,17 @@ if __name__ == '__main__':
 	traverse_files()
 	df = init_dataframe()
 	save_dataframe_to_csv(df)
+
+
+'''
+description	description/t
+comment	comment/t
+difficulty	difficulty/t
+prepTime	prepTime/t
+totalTime	totalTime/t
+servingSize	servingSize/t
+createdAt	createdAt/t
+updatedAt	updatedAt/t
+imageLink	imageLink/t
+videoLink	videoLink/t
+'''

@@ -26,7 +26,7 @@ Go to subdirectory ./recipes to see crawled recipes.
 
 * __Problem:__ Sadly there were some encoding problems within the recipe data. See screenshot.
 ![Encoding Problems](./docs/encoding-problems.jpg)
-* _Solution:_ I had to use a mass search and replace tool to replace these characters. About 5min work.
+	* _Solution:_ I had to use a mass search and replace tool to replace these characters. About 5min work.
 
 * __WORK IN PROGRESS__
 
@@ -42,5 +42,5 @@ Go to subdirectory ./recipes to see crawled recipes.
 - [ ] build SQL/Pandas Dataset
 
 ### Troubleshooting
-[Maybe you have to install geckodriver](https://stackoverflow.com/questions/40208051/selenium-using-python-geckodriver-executable-needs-to-be-in-path)
-[Maybe you have to install cURL and add it to your Path](https://curl.haxx.se/)
+* [Maybe you have to install geckodriver](https://stackoverflow.com/questions/40208051/selenium-using-python-geckodriver-executable-needs-to-be-in-path)
+* [Maybe you have to install cURL and add it to your Path](https://curl.haxx.se/)
