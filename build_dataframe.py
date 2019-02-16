@@ -15,7 +15,7 @@ data_dict = {
 	'name' : '/name/text()',
 	'url' : '/link/text()',
 	'subtitle' : '/headline/text()',
-	'nutritionnames2compare' : '/nutrition/item/name/text()'
+	'nutritionnames2compare' : '/nutrition/item'
 	# ...
 }
 	
@@ -51,12 +51,17 @@ def write_data_to_list(filepath):
 
 			for dict_row in data_dict.keys():
 				
-				t = root.xpath(XPATH_PREFIX + data_dict[dict_row])
-
-				if len(t) == 1:
-					temp_dict[dict_row] = t[0]
-				else:
-					temp_dict[dict_row] = [t]
+				xpath_expression = XPATH_PREFIX + data_dict[dict_row]
+				try:
+					t = root.xpath(xpath_expression)
+				except etree.XPathEvalError as e:
+					print('Exception!', xpath_expression)
+					raise e
+				finally:
+					if len(t) == 1:
+						temp_dict[dict_row] = t[0]
+					else:
+						temp_dict[dict_row] = [recursive_dict(e) for e in t]
 				
 			data_column_list.append(temp_dict)
 
@@ -84,6 +89,17 @@ def save_dataframe_to_csv(df):
 	saves Dataframe to csv file
 	'''
 	df.to_csv(os.path.join('CSV', 'recipe_dataframe.csv'), sep='\t', encoding='utf-8')
+
+
+def recursive_dict(element):
+	'''
+	convert xml structure into dict
+	'''
+    if element.text == None and len(element.attrib):
+        return element.tag, element.attrib
+    return element.tag, \
+            dict(map(recursive_dict, element)) or element.text
+
 
 if __name__ == '__main__':
 	traverse_files()
