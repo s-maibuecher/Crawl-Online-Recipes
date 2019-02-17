@@ -80,7 +80,18 @@ def process_element_list(etree_element_list):
     '''
     print([te.attrib for te in etree_element_list])
     return '' # hier weiter
-    
+
+    '''
+    possible types:
+    int
+    list
+    dict
+    str
+    null
+    float
+    bool
+    '''
+
 
 def traverse_files():
     '''
