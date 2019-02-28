@@ -3,6 +3,12 @@ from lxml import etree
 import pandas as pd
 
 
+class MyBuildDataFrameException(Exception):
+    """Raise for my specific kind of exception"""
+
+class ToDoException(Exception):
+    """This Type of Elements has not yet a execution path"""
+
 class BuildDataframe(object):
     """build a pandas dataframe from several recipes xml files"""
     
@@ -86,19 +92,33 @@ class BuildDataframe(object):
         '''
         function that returns all importants texts from xml structure:
         '''
-        print([te.attrib for te in etree_element_list])
-        return '' # hier weiter
 
-        '''
-        possible types:
-        int
-        list
-        dict
-        str
-        null
-        float
-        bool
-        '''
+        all_type_of_elements = set([el.attrib['type'] for el in etree_element_list])
+
+        if not len(all_type_of_elements) == 1:
+            raise MyBuildDataFrameException('Too many Types of XML Elements!')
+
+        type_of_element = all_type_of_elements.pop()
+
+        print(type_of_element)
+
+        if type_of_element == 'int':
+            raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+        elif type_of_element == 'list':
+            raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+        elif type_of_element == 'dict':
+            raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+        elif type_of_element == 'str':
+            raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+        elif type_of_element == 'null':
+            raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+        elif type_of_element == 'float':
+            raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+        elif type_of_element == 'bool':
+            raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+
+        
+        return '' # hier weiter
 
 
     def traverse_files(self):
