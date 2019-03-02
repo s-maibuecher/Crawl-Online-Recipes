@@ -1,6 +1,7 @@
 import os
 from lxml import etree
 import pandas as pd
+from collections import defaultdict
 
 
 class MyBuildDataFrameException(Exception):
@@ -33,16 +34,15 @@ class BuildDataframe(object):
         self.data_column_list = []
         self.recipe_df = None
     
-    
 
 
     def init_dataframe(self):
         '''
         init and returns the dataframe with the keys from the self.data_dict as columns values
         '''
-        
+        print("Liste für das Dataframe:", self.data_column_list)
         recipe_dataframe = pd.DataFrame(self.data_column_list)
-        print(recipe_dataframe.head())
+        print("Dataframe Head:", recipe_dataframe.head())
 
         self.recipe_df = recipe_dataframe
 
@@ -73,14 +73,8 @@ class BuildDataframe(object):
                         raise e
                     finally:
                         # here you work with lists of https://lxml.de/api/lxml.etree._Element-class.html elements:
-                        data_for_df = self.process_element_list(element_list)
-                        
-                        
-                        # if len(element_list) == 1:
-                        #   data_for_df[dict_row] = element_list[0]
-                        # else:
-                        #   data_for_df[dict_row] = [recursive_dict(e) for e in element_list]
-
+                        data_for_df[dict_row] = self.process_element_list(element_list)
+                    
                     
                 self.data_column_list.append(data_for_df)
 
@@ -104,21 +98,33 @@ class BuildDataframe(object):
 
         if type_of_element == 'int':
             raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+
         elif type_of_element == 'list':
             raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+
         elif type_of_element == 'dict':
-            raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+            d = defaultdict(list)
+            for el in etree_element_list:
+                el, di = self.recursive_dict(el)
+                d[el].append(di)
+
+            return d
+
         elif type_of_element == 'str':
-            raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+            return etree_element_list[0].text
+
         elif type_of_element == 'null':
             raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+
         elif type_of_element == 'float':
             raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+
         elif type_of_element == 'bool':
             raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
 
+        else:
         
-        return '' # hier weiter
+            return ''
 
 
     def traverse_files(self):
@@ -150,7 +156,7 @@ class BuildDataframe(object):
         if element.text == None and len(element.attrib):
             return element.tag, element.attrib
         return element.tag, \
-                dict(map(recursive_dict, element)) or element.text
+                dict(map(self.recursive_dict, element)) or element.text
 
 
 if __name__ == '__main__':
