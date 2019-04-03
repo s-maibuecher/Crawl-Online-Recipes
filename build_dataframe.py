@@ -27,7 +27,21 @@ class BuildDataframe(object):
             'name' : '/name',
             'url' : '/link',
             'subtitle' : '/headline',
-            'nutritionnames2compare' : '/nutrition/item'
+            'nutritionnames2compare' : '/nutrition/item',
+            # ab hier überprüfen:
+            'description': '/description',
+            'comment': '/comment',
+            'difficulty': '/difficulty',
+            'prepTime': '/prepTime',
+            'totalTime': '/totalTime',
+            'servingSize': '/servingSize',
+            'createdAt': '/createdAt',
+            'updatedAt': '/updatedAt',
+            'imageLink': '/imageLink',
+            'videoLink': '/videoLink',
+            'ingredients': '/ingredients',
+            'allergens': '/allergens',
+            'utensils': '/utensils',
             # ...
         }
 
@@ -97,9 +111,10 @@ class BuildDataframe(object):
         print(type_of_element)
 
         if type_of_element == 'int':
-            raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+            return etree_element_list[0].text
 
         elif type_of_element == 'list':
+            # Todo hier weiter mit dem Listentyp machen und die anderen hinzugefügten Elemente im CSV überprüfen
             raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
 
         elif type_of_element == 'dict':
@@ -114,7 +129,7 @@ class BuildDataframe(object):
             return etree_element_list[0].text
 
         elif type_of_element == 'null':
-            raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+            return ''
 
         elif type_of_element == 'float':
             raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
