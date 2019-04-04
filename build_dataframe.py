@@ -26,11 +26,12 @@ class BuildDataframe(object):
         self.data_dict = {
             'name' : '/name',
             'url' : '/link',
+            'id': '/id',
             'subtitle' : '/headline',
             'nutritionnames2compare' : '/nutrition/item',
-            # ab hier überprüfen:
             'description': '/description',
             'comment': '/comment',
+            'category' : '/category',
             'difficulty': '/difficulty',
             'prepTime': '/prepTime',
             'totalTime': '/totalTime',
@@ -39,11 +40,35 @@ class BuildDataframe(object):
             'updatedAt': '/updatedAt',
             'imageLink': '/imageLink',
             'videoLink': '/videoLink',
-            'ingredients': '/ingredients',
-            'allergens': '/allergens',
-            'utensils': '/utensils',
-            # ...
+            'ingredients': '/ingredients/item',
+            'allergens': '/allergens/item',
+            #'utensils': '/utensils/item', # is always an empty element till now
+            # tags
+
+                # Todo: Was mache ich mit diesen bisher leeren Listen Elementen wie utensils?
+                # Leer führen sie zu Verarbeitungsfehlern. Daher auskommentiert.
+                # Dann bekomme ich aber nicht mit, wenn die irgendwann gefüllt sein sollten...
+
+            'cuisines' : '/cuisines/item',
+            #'wines': '/wines/item', # Todo wirft Fehler
+            # 'marketplaceItems' : '/marketplaceItems/item', # hier auch
+            'author': '/author',
+            'label' : '/label',
+            'yieldType' : '/yieldType',
+            'yields': '/yields/item',
+            'steps': '/steps/item',
+            'averageRating': '/averageRating',
+            'ratingsCount': '/ratingsCount',
+            'favoritesCount': '/favoritesCount',
+            'active': '/active',
+            'highlighted': '/highlighted',
+            'isDinnerToLunch': '/isDinnerToLunch',
+            'isExcludedFromIndex': '/isExcludedFromIndex',
+            'isPremium': '/isPremium',
+            'clonedFrom': '/clonedFrom',
+            'canonical': '/canonical',
         }
+
 
         self.data_column_list = []
         self.recipe_df = None
@@ -114,7 +139,6 @@ class BuildDataframe(object):
             return etree_element_list[0].text
 
         elif type_of_element == 'list':
-            # Todo hier weiter mit dem Listentyp machen und die anderen hinzugefügten Elemente im CSV überprüfen
             raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
 
         elif type_of_element == 'dict':
@@ -182,27 +206,3 @@ if __name__ == '__main__':
     df_builder.save_dataframe_to_csv()
 
 
-    '''
-    description description/t
-    comment comment/t
-    difficulty  difficulty/t
-    prepTime    prepTime/t
-    totalTime   totalTime/t
-    servingSize servingSize/t
-    createdAt   createdAt/t
-    updatedAt   updatedAt/t 
-    imageLink   imageLink/t
-    videoLink   videoLink/t
-    ingredients ingredients/item
-    allergens   allergens/item
-    utensils    utensils/item
-
-
-    alle items mit vorgänger namen speichern?
-
-
-    was ist mit?
-
-    tags/item
-    cuisines/item
-    '''
