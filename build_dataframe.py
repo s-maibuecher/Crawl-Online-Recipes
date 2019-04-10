@@ -20,6 +20,8 @@ class BuildDataframe(object):
         # make directory if not exsists
         if not os.path.exists('CSV'):
             os.makedirs('CSV')
+        if not os.path.exists('PKL'):
+            os.makedirs('PKL')
         
         # let's build a dict with key name (name for the pandas column), and a xpath (where to find in the recipe XML files):
         # IMPORTANT: the XPath should be relative to the item (=recipe) element 
@@ -129,11 +131,11 @@ class BuildDataframe(object):
         all_type_of_elements = set([el.attrib['type'] for el in etree_element_list])
 
         if not len(all_type_of_elements) == 1:
+            if len(all_type_of_elements) == 0:
+                return ''
             raise MyBuildDataFrameException('Too many Types of XML Elements!')
 
         type_of_element = all_type_of_elements.pop()
-
-        print(type_of_element)
 
         if type_of_element == 'int':
             return etree_element_list[0].text
@@ -156,10 +158,10 @@ class BuildDataframe(object):
             return ''
 
         elif type_of_element == 'float':
-            raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+            return etree_element_list[0].text
 
         elif type_of_element == 'bool':
-            raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
+            return etree_element_list[0].text
 
         else:
         
@@ -176,16 +178,18 @@ class BuildDataframe(object):
                 filepath = subdir + os.sep + file
 
                 if filepath.endswith(".xml") and file.startswith('recipe'):
-                    if file.startswith('recipe_debugging'): # for debugging!!
+                    #if file.startswith('recipe_debugging'): # for debugging!!
                         # for debugging!!
                         self.write_data_to_list(filepath)
 
 
     def save_dataframe_to_csv(self):
         '''
-        saves Dataframe to csv file
+        saves Dataframe to csv file and to pkl file
         '''
         self.recipe_df.to_csv(os.path.join('CSV', 'recipe_dataframe.csv'), sep='\t', encoding='utf-8')
+
+        #self.recipe_df.to_pickle(os.path.join('PKL', 'recipe_dataframe.pkl'))
 
 
     def recursive_dict(self, element):
