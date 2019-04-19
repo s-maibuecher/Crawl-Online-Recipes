@@ -28,6 +28,13 @@ Go to subdirectory ./recipes to see crawled recipes.
 ![Encoding Problems](./docs/encoding-problems.jpg)
 	* _Solution:_ I had to use a mass search and replace tool to replace these characters. About 5min work.
 
+`python build_dataframe.py` now builds a CSV dataset out of all recipes. You can find it in the _CSV_ subdirectory.
+![CSV Dataset](./docs/csv_dataset.jpg)
+
+* __Problem:__ Some important fields like ingredients contain huge objects which are not ready for DataScience processing.
+![Objects for feature engineering](./docs/objects-for-feature-engineering.jpg)	
+	* _Solution:_ By now Feature Engineering
+
 * __WORK IN PROGRESS__
 
 ### To-Do:
@@ -38,7 +45,8 @@ Go to subdirectory ./recipes to see crawled recipes.
 - [x] for production: add more subpages to crawl
 - [x] study HTTP Requests/Responses
 - [x] send HTTP requests via python
-- [ ] look for hidden data in the sourcecode, like "ratingsCount", "favoritesCount", ...
+- [x] look for hidden data in the sourcecode, like "ratingsCount", "favoritesCount", ...
+- [ ] Feature Engineering
 - [ ] build SQL/Pandas Dataset
 
 ### Troubleshooting

@@ -196,7 +196,7 @@ class BuildDataframe(object):
         '''
         convert xml structure into dict
         '''
-        if element.text == None and len(element.attrib):
+        if element.text is None and len(element.attrib):
             return element.tag, element.attrib
         return element.tag, \
                 dict(map(self.recursive_dict, element)) or element.text
