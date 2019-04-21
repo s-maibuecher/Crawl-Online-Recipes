@@ -2,11 +2,11 @@
 
 import pandas as pd
 
-df = pd.read_csv('./CSV/recipe_dataframe.csv', encoding='utf-8') # first version needs also the sep='\t' seperator
+df = pd.read_csv('./CSV/recipe_dataframe.csv', encoding='utf-8', sep='\t')
 
-print(df['ingredients'][0])
+ingr = df['ingredients'][0]
 
-
+print(ingr)
 # Todo: und weiter geht's
 
 # ... fetch all ingredients of all recipes and onehotecode these fields to every row...

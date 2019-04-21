@@ -33,7 +33,7 @@ Go to subdirectory ./recipes to see crawled recipes.
 
 * __Problem:__ Some important fields like ingredients contain huge objects which are not ready for DataScience processing.
 ![Objects for feature engineering](./docs/objects-for-feature-engineering.jpg)	
-	* _Solution:_ By now Feature Engineering
+	* _Solution:_ First: Saved these objects into xml structure, because I like to use XPATH, when I inspect bigger objects. By now Feature Engineering
 
 * __WORK IN PROGRESS__
 

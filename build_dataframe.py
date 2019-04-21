@@ -144,10 +144,11 @@ class BuildDataframe(object):
             raise ToDoException(f'This Type of Element: {type_of_element} has not yet a execution path')
 
         elif type_of_element == 'dict':
-            d = defaultdict(list)
+            d = ''
             for el in etree_element_list:
-                el, di = self.recursive_dict(el)
-                d[el].append(di)
+                # el, di = self.recursive_dict(el)
+                # d[el].append(di)
+                d += str(etree.tostring(el, encoding='utf8', method='xml').decode('UTF-8'))
 
             return d
 
@@ -178,7 +179,7 @@ class BuildDataframe(object):
                 filepath = subdir + os.sep + file
 
                 if filepath.endswith(".xml") and file.startswith('recipe'):
-                    #if file.startswith('recipe_debugging'): # for debugging!!
+                    if file.startswith('recipe_debugging'): # for debugging!!
                         # for debugging!!
                         self.write_data_to_list(filepath)
 
