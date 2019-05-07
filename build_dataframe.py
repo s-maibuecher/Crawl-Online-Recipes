@@ -179,9 +179,9 @@ class BuildDataframe(object):
                 filepath = subdir + os.sep + file
 
                 if filepath.endswith(".xml") and file.startswith('recipe'):
-                    if file.startswith('recipe_debugging'): # for debugging!!
+                    #if file.startswith('recipe_debugging'): # for debugging!!
                         # for debugging!!
-                        self.write_data_to_list(filepath)
+                    self.write_data_to_list(filepath)
 
 
     def save_dataframe_to_csv(self):
@@ -211,3 +211,7 @@ if __name__ == '__main__':
     df_builder.save_dataframe_to_csv()
 
 
+# Todo: XML invalid chars replacement:
+# 0x1f --> t
+# 0x1e --> t
+# 0x1d --> kann weg

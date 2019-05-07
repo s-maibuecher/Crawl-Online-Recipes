@@ -10,7 +10,10 @@ new_df = df.copy()
 for index, row in df.iterrows():
     ingr = '<root>' + df['ingredients'][index] + '</root>'
 
-    yields_root = ET.fromstring(df['yields'][index])
+    try:
+        yields_root = ET.fromstring(df['yields'][index]) # Todo: gibt es hier immer 3 items? dann muss nur ein root element drum rum
+    except ET.ParseError:
+        pass
 
     root = ET.fromstring(ingr)
 
