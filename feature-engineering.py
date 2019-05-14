@@ -10,6 +10,8 @@ new_df = df.copy()
 new_df['yield_amounts'] = None
 
 for index, row in df.iterrows():
+    print(f'Neue Zeile: {index}')
+
     ingr_tree = '<root>' + df['ingredients'][index] + '</root>'
 
     yields_root = ET.fromstring('<root>' + df['yields'][index] + '</root>')
@@ -35,7 +37,11 @@ for index, row in df.iterrows():
 
     for item in items:
         item_name = item.find('./family/name')
-        column_name = f'ingr_normalized_{item_name.text}'
+        try:
+            column_name = f'ingr_normalized_{item_name.text}'
+        except AttributeError: # when <family type="null"/>
+            column_name = f'ingr_normalized_{item.text}'
+
         if not column_name in new_df.columns:
             new_df[column_name] = None
 
