@@ -2,14 +2,26 @@
 
 import pandas as pd
 import xml.etree.ElementTree as ET
+import os
 
 df = pd.read_csv('./CSV/recipe_dataframe.csv', encoding='utf-8', sep='\t')
+
+df.drop(df.columns[df.columns.str.contains('Unnamed',case = False)],axis = 1, inplace = True)
+df.set_index('id', inplace=True)
+
 
 new_df = df.copy()
 
 new_df['yield_amounts'] = None
 
 for index, row in df.iterrows():
+
+    # Todo delete that for production:
+    # FOR DEBUGGING
+    if index > 10:
+        break
+    # END DEBUGGING
+
     print(f'Neue Zeile: {index}')
 
     ingr_tree = '<root>' + df['ingredients'][index] + '</root>'
@@ -23,13 +35,6 @@ for index, row in df.iterrows():
         yield_amounts.append(y.text)
 
     new_df['yield_amounts'][index] = yield_amounts
-
-    # Todo die meißten Gerichte haben ['2', '3', '4'] yield amounts, siehe Grafik
-    # das hier sind Werte aus den ersten 250 Rezepten
-    # einige haben aber auch ['2', '4', '6', '8']
-    # und eins hat [3]
-    # also müssen die Stückzahlen unten genormt werden
-    # soll ich noch aufnehmen welches Rezept wieviele yields anbietet?
 
     root = ET.fromstring(ingr_tree)
 
@@ -57,14 +62,24 @@ for index, row in df.iterrows():
 
         new_df[column_name][index] = yield_string
 
-        # todo test that ;)
-
 
 print(new_df.shape)
 
+# new_df.to_hdf('recipes.h5', key='df', mode='w')
+
+new_df.to_csv(os.path.join('CSV', 'final_dataframe.csv'), sep='\t', encoding='utf-8')
 
 # Todo unwichtige Zutaten wie Salz, Pfeffer werden nicht mitgeliefert, bekommen bei shipped den Wert False
 #
 # Todo xml rezept dateien einchecken
 #
 # Todo im oxygen abchecken, ob alle die gleichen nutritionnames beinhalten
+#
+# Todo alte große Spalten rauslöschen
+
+
+# Todo: inspect columns:
+
+# active is always True -> boring
+# author are 17 unique values
+# averageRating self-explaining
