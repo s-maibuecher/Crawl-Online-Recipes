@@ -3,16 +3,34 @@
 import pandas as pd
 import xml.etree.ElementTree as ET
 import os
+import math
 
 df = pd.read_csv('./CSV/recipe_dataframe.csv', encoding='utf-8', sep='\t')
 
-df.drop(df.columns[df.columns.str.contains('Unnamed',case = False)],axis = 1, inplace = True)
-df.set_index('id', inplace=True)
+print('Shape before feature engineering: ' + str(df.shape))
 
+# Todo bind in later:
+# df.drop(df.columns[df.columns.str.contains('Unnamed',case = False)],axis = 1, inplace = True)
+# df.set_index('id', inplace=True)
 
 new_df = df.copy()
 
 new_df['yield_amounts'] = None
+
+
+def func_applied_to_category(xml_string):
+    ''' function that extracts the values of the category feature: '''
+    if str(xml_string) == 'nan':
+        return None
+    root = ET.fromstring(xml_string)
+    root_type_attr = root.attrib['type']
+    if root_type_attr == 'null':
+        return None
+    else:
+        return root.find('./name').text
+
+
+new_df['category'] = new_df['category'].apply(func_applied_to_category)
 
 for index, row in df.iterrows():
 
@@ -63,7 +81,7 @@ for index, row in df.iterrows():
         new_df[column_name][index] = yield_string
 
 
-print(new_df.shape)
+print('Shape after feature engineering: ' + str(new_df.shape))
 
 # new_df.to_hdf('recipes.h5', key='df', mode='w')
 
@@ -83,3 +101,9 @@ new_df.to_csv(os.path.join('CSV', 'final_dataframe.csv'), sep='\t', encoding='ut
 # active is always True -> boring
 # author are 17 unique values
 # averageRating self-explaining
+# canonical can be dropped
+# category i've already extracted
+# clonedFrom is interesting
+# comment just two values, what for?
+# createdAt can be timeplotted
+# cuisines todo hier das extracten wie category
