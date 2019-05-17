@@ -9,10 +9,6 @@ df = pd.read_csv('./CSV/recipe_dataframe.csv', encoding='utf-8', sep='\t')
 
 print('Shape before feature engineering: ' + str(df.shape))
 
-# Todo bind in later:
-# df.drop(df.columns[df.columns.str.contains('Unnamed',case = False)],axis = 1, inplace = True)
-# df.set_index('id', inplace=True)
-
 new_df = df.copy()
 
 new_df['yield_amounts'] = None
@@ -146,15 +142,15 @@ for index, row in df.iterrows():
 
 print('Shape after feature engineering: ' + str(new_df.shape))
 
+new_df.set_index(new_df.columns[0], inplace=True)
+
+# # df.drop(df.columns[df.columns.str.contains('Unnamed',case = False)],axis = 1, inplace = True) # do I need that?
+
 # new_df.to_hdf('recipes.h5', key='df', mode='w')
 
 new_df.to_csv(os.path.join('CSV', 'final_dataframe.csv'), sep='\t', encoding='utf-8')
 
 # Todo unwichtige Zutaten wie Salz, Pfeffer werden nicht mitgeliefert, bekommen bei shipped den Wert False
-#
-# Todo xml rezept dateien einchecken
-#
-# Todo im oxygen abchecken, ob alle die gleichen nutritionnames beinhalten
 #
 # Todo alte große Spalten rauslöschen
 #
