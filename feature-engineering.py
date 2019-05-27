@@ -4,6 +4,7 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 import os
 import math
+from win32com.server import exception
 
 df = pd.read_csv('./CSV/recipe_dataframe.csv', encoding='utf-8', sep='\t')
 
@@ -67,19 +68,22 @@ new_df['how_many_steps_needed'] = None
 
 for index, row in df.iterrows():
 
-    # Todo delete that for production:
+    # comment out this if for production:
     # FOR DEBUGGING
-    if index > 50:
-        break
+    # if index > 50:
+    #     break
     # END DEBUGGING
 
     #howmanystepsneeded:
-    steps_tree = '<root>' + df['steps'][index] + '</root>'
-    steps_root = ET.fromstring(steps_tree)
-    all_steps = steps_root.findall('./item/index')
-    steps_needed = max([int(x.text) for x in all_steps])
-    new_df['how_many_steps_needed'][index] = steps_needed if steps_needed > 1 else None # if only one step is in the data, this seems to be a placeholder
+    try:
+        steps_tree = '<root>' + df['steps'][index] + '</root>'
 
+        steps_root = ET.fromstring(steps_tree)
+        all_steps = steps_root.findall('./item/index')
+        steps_needed = max([int(x.text) for x in all_steps])
+        new_df['how_many_steps_needed'][index] = steps_needed if steps_needed > 1 else None # if only one step is in the data, this seems to be a placeholder
+    except:
+        new_df['how_many_steps_needed'][index] = None
 
     # fill nutrition columns:
     nut_tree = '<root>' + df['nutritionnames2compare'][index] + '</root>'
@@ -93,7 +97,7 @@ for index, row in df.iterrows():
         else:
             amount = item.find('./amount').text
             unit = item.find('./unit').text
-            new_df['nutrition_' + col_name][index] = f'{amount} {unit}'
+            new_df['nutrition_' + col_name][index] = f'{amount} {unit} per serving'
 
     print(f'Neue Zeile: {index}')
 
@@ -144,17 +148,16 @@ print('Shape after feature engineering: ' + str(new_df.shape))
 
 new_df.set_index(new_df.columns[0], inplace=True)
 
-# # df.drop(df.columns[df.columns.str.contains('Unnamed',case = False)],axis = 1, inplace = True) # do I need that?
+#new_df.drop(df.columns[df.columns.str.contains('Unnamed',case = False)],axis = 1, inplace = True) # do I need that?
+
+# new_df.drop(['ingredients', 'nutritionnames2compare'], inplace=True)
 
 # new_df.to_hdf('recipes.h5', key='df', mode='w')
 
 new_df.to_csv(os.path.join('CSV', 'final_dataframe.csv'), sep='\t', encoding='utf-8')
 
-# Todo unwichtige Zutaten wie Salz, Pfeffer werden nicht mitgeliefert, bekommen bei shipped den Wert False
-#
-# Todo alte große Spalten rauslöschen
-#
-# Todo nutrition Werte sind pro Portion??
+# unwichtige Zutaten wie Salz, Pfeffer werden nicht mitgeliefert, bekommen bei shipped den Wert False, ich lasse sie mal drin
+
 
 # inspect columns:
 
