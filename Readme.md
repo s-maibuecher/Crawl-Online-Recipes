@@ -1,5 +1,10 @@
 # Build a Food Recipes Dataset :fork_and_knife: :stew: :pizza:
 
+**tl;dr** study final dataset here: `/CSV/final_dataframe.csv`
+
+
+## Summary
+
 Scrapy and Selenium based Web Crawler to crawl thousands of Food Receipes for a nice DataScience Dataset.
 
 `scrapy crawl recipe-spider`
@@ -35,9 +40,13 @@ Go to subdirectory ./recipes to see crawled recipes.
 ![Objects for feature engineering](./docs/objects-for-feature-engineering.jpg)	
 	* _Solution:_ First: Saved these objects into xml structure, because I like to use XPATH, when I inspect bigger objects. By now Feature Engineering
 
-* __WORK IN PROGRESS__
+* built the final dataframe with `python feature-engineering.py`
 
-### To-Do:
+* :raised_hands: Study final data at _CSV/finaldataframe.csv_ :raised_hands:
+
+:clap::clap::clap:
+
+### ~~To-Do~~:
 - [x] build initial spider to crawl some recipes
 - [x] saving scraped recipes
 - [x] simulate click html button 'Mehr Anzeigen' to see more sources
@@ -46,8 +55,8 @@ Go to subdirectory ./recipes to see crawled recipes.
 - [x] study HTTP Requests/Responses
 - [x] send HTTP requests via python
 - [x] look for hidden data in the sourcecode, like "ratingsCount", "favoritesCount", ...
-- [ ] Feature Engineering
-- [ ] build SQL/Pandas Dataset
+- [x] Feature Engineering
+- [x] build CSV Dataset
 
 ### Troubleshooting
 * [Maybe you have to install geckodriver](https://stackoverflow.com/questions/40208051/selenium-using-python-geckodriver-executable-needs-to-be-in-path)

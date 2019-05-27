@@ -3,5 +3,6 @@
 *.xml
 *.csv
 !http_requested_json_recipes/one_recipe.xml
+!CSV/final_dataframe.csv
 .project
 geckodriver.log
