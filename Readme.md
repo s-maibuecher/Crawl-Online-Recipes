@@ -1,6 +1,11 @@
-# Build a Food Recipes Dataset :fork_and_knife: :stew: :pizza:
+# Build up a Food Recipes Dataset with web-crawled HTML recipes :fork_and_knife: :stew: :pizza:
 
 **tl;dr** study final dataset here: `/CSV/final_dataframe.csv`
+
+# Data Science is OSEMN
+Data Science projects are subdivided into five steps: (1) obtaining data, (2) scrubbing data, (3) exploring data, (4) modeling data, and (5) interpreting data.  
+This project covers steps (1) and (2) and is building up a dataset from web-crawled HTML recipes.  
+Steps (3)-(5) are covered in my next project.
 
 
 ## Summary
@@ -38,11 +43,11 @@ Go to subdirectory ./recipes to see crawled recipes.
 
 * __Problem:__ Some important fields like ingredients contain huge objects which are not ready for DataScience processing.
 ![Objects for feature engineering](./docs/objects-for-feature-engineering.jpg)	
-	* _Solution:_ First: Saved these objects into xml structure, because I like to use XPATH, when I inspect bigger objects. By now Feature Engineering
+	* _Solution:_ First: Saved these objects into xml structure, because I like to use XPATH, when I inspect bigger objects.
 
-* built the final dataframe with `python feature-engineering.py`
+* save the final dataframe with `python scrubbing_data.py`
 
-* :raised_hands: Study final data at _CSV/finaldataframe.csv_ :raised_hands:
+* :raised_hands: Study final data at `CSV/final_dataframe.csv` :raised_hands:
 
 :clap::clap::clap:
 
@@ -55,8 +60,8 @@ Go to subdirectory ./recipes to see crawled recipes.
 - [x] study HTTP Requests/Responses
 - [x] send HTTP requests via python
 - [x] look for hidden data in the sourcecode, like "ratingsCount", "favoritesCount", ...
-- [x] Feature Engineering
-- [x] build CSV Dataset
+- [x] scrubbing data 
+- [x] save as CSV dataset
 
 ### Troubleshooting
 * [Maybe you have to install geckodriver](https://stackoverflow.com/questions/40208051/selenium-using-python-geckodriver-executable-needs-to-be-in-path)
